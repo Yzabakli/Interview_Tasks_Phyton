@@ -1,7 +1,7 @@
 import string
 
 
-def consecutive_numbers(number):
+def _consecutive_numbers(number):
     for n in range(number):
 
         if n != 0:
@@ -39,4 +39,4 @@ def consecutive_numbers(number):
                 print(n)
 
 
-consecutive_numbers(24)
+_consecutive_numbers(24)

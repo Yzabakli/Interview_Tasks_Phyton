@@ -1,4 +1,4 @@
-def isArmstrong(number):
+def _is_armstrong(number):
     number_to_string = str(number)
 
     power = len(number_to_string)
@@ -15,4 +15,4 @@ def isArmstrong(number):
     return temp == number
 
 
-print(isArmstrong(155047533421450153908889))
+print(_is_armstrong(155047533421450153908889))

@@ -1,4 +1,4 @@
-def divide(dividend, divisor):
+def _divide(dividend, divisor):
     result = 0
 
     while dividend >= divisor:
@@ -8,4 +8,4 @@ def divide(dividend, divisor):
     return {"Quotient": result, "Remainder": dividend}
 
 
-print(divide(75, 4))
+print(_divide(75, 4))

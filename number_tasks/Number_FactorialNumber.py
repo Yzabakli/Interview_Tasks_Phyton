@@ -1,11 +1,11 @@
-def factorialNumber(number):
+def _factorial_number(number):
     if number == 0:
         return 1
 
-    return number * factorialNumber(number - 1)
+    return number * _factorial_number(number - 1)
 
 
-def factorialNumber2(number):
+def _factorial_number_2(number):
 
     factor = 1
     i = number
@@ -18,4 +18,4 @@ def factorialNumber2(number):
     return factor
 
 
-print(factorialNumber2(10))
+print(_factorial_number_2(10))

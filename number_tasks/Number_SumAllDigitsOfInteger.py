@@ -1,4 +1,4 @@
-def digSum(n):
+def _dig_sum(n):
     if n < 10:
         return n
 
@@ -13,4 +13,4 @@ def digSum(n):
 
 
 n = 1234
-print(digSum(n))
+print(_dig_sum(n))

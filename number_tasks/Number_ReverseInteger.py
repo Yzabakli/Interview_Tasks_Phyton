@@ -1,4 +1,4 @@
-def reverseInteger(num):
+def _reverse_integer(num):
     temp = 0
 
     while int(num) != 0:
@@ -8,4 +8,4 @@ def reverseInteger(num):
     return int(temp)
 
 
-print(reverseInteger(473573657))
+print(_reverse_integer(473573657))

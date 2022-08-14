@@ -1,4 +1,4 @@
-def sumAllDigitsUntilOneDigit(n):
+def _sum_all_digits_until_one_digit(n):
     while n > 9:
 
         digit = n
@@ -14,4 +14,4 @@ def sumAllDigitsUntilOneDigit(n):
         n = s
 
 
-sumAllDigitsUntilOneDigit(797897)
+_sum_all_digits_until_one_digit(797897)
