@@ -1,3 +1,6 @@
+import time
+
+
 def _lovely_number(a, b):
     if a == b:
 
@@ -29,4 +32,44 @@ def _lovely_number(a, b):
     return count
 
 
-print(_lovely_number(1099, 4879))
+def _lovely_number_2(a, b):
+    lovely_number_count = 0
+
+    if a < 1000:
+
+        lovely_number_count = 1000 - a
+
+        if b > 1000:
+            lovely_number_count -= 9 - int(a / 111)
+
+        else:
+            return lovely_number_count - (int(b / 111) - int(a / 111))
+
+        a = 1000
+
+    while a <= b:
+        digit_frequencies = {}
+
+        digits_as_char_array = str(a)
+
+        for c in digits_as_char_array:
+            if digit_frequencies.__contains__(c):
+                digit_frequencies.update({c: digit_frequencies[c] + 1})
+
+            else:
+                digit_frequencies[c] = 1
+
+            if digit_frequencies[c] > 2:
+                break
+
+        if 3 not in digit_frequencies.values():
+            lovely_number_count += 1
+
+        a += 1
+
+    return lovely_number_count
+
+
+start = time.time()
+print(_lovely_number_2(1, 4879))
+print(time.time() - start)
