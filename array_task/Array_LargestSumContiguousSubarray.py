@@ -1,20 +1,14 @@
 def _largest_sum_contiguous_sub_array(array):
-    _max = 0
-    temp = 0
-    temp2 = -876606428364086
+    max_1 = 0
 
-    for i in array:
-        temp2 = max(temp2, i)
+    for i in range(len(array)):
+        max_2 = array[i]
 
-    if temp2 <= 0:
-        return temp2
+        for x in range(i + 1, len(array)):
+            max_2 += array[x]
+            max_1 = max(max_1, max_2)
 
-    for x in array:
-        temp += x
-        temp = max(temp, 0)
-        _max = max(_max, temp)
-
-    return _max
+    return max_1
 
 
 print(_largest_sum_contiguous_sub_array([-2, 1, -3, 4, -1, 2, 1, -5, 4]))
