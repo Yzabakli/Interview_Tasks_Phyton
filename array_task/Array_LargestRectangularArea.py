@@ -1,6 +1,6 @@
 def _largest_rectangular_area(array):
 
-    _list = []
+    _max = 0
 
     for i in range(len(array)):
 
@@ -22,9 +22,9 @@ def _largest_rectangular_area(array):
             count += 1
             k -= 1
 
-        _list.append(array[i] * count)
+        _max = max(_max, array[i] * count)
 
-    return max(_list)
+    return _max
 
 
 print(_largest_rectangular_area([6, 2, 5, 4, 5, 1, 6]))
