@@ -1,4 +1,4 @@
-def no_triples(array):
+def _no_triples(array):
     for i in range(len(array)):
 
         try:
